@@ -1,0 +1,46 @@
+$primary:#6C63FF;
+$secondary:#F4A261;
+$background:#F8F9FA;
+$text:#343A40;
+$error:#E63946;
+$success:#2A9D8F;
+
+
+
+.header {
+  color: $text;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5%;
+  width: calc(100% - 10%);
+  position: fixed;
+}
+
+.logo{
+  width:64px;
+  height:100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header_nav{
+  display: flex;
+  ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    li{
+      margin: 0 20px;
+      a{
+        color: $text;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
