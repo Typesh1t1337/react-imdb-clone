@@ -5,9 +5,7 @@ export function Header({menu}) {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <a href='/'>
-                    <img src={logo} alt='icon' width={64}/>
-                </a>
+                <img src={logo} alt='icon'  width={64}/>
             </div>
             <div className={styles.header_nav}>
                 <ul className={styles.nav_content}>
