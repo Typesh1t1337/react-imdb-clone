@@ -1,24 +1,20 @@
-import styles from './App.module.scss'
-import { Header } from "./Header.jsx";
+import {Route, BrowserRouter, Routes} from "react-router-dom";
+import { WatchListApp } from './watchlist/WatchListApp.jsx'
+import { IndexApp } from './index/IndexApp.jsx'
+import { PopularApp } from "./popular/PopularApp.jsx";
+import {AccountApp} from "./account/AccountApp.jsx";
 
-const menu = [
-    {
-        name: 'Home',
-        link: '/',
-    },
-    {
-        name: 'About',
-        link: '/about',
-    },
-    {
-        name: 'Contact',
-        link: '/contact',
-    }
-]
 
 export function App() {
     return (
-            <Header menu={menu} />
+        <BrowserRouter>
+            <Routes>
+                <Route path="/popular" element={<PopularApp/>} />
+                <Route path="/watchlist" element={<WatchListApp />} />
+                <Route path="/*" element={<IndexApp />} />
+                <Route  path="/account/*" element={<AccountApp />} />
+            </Routes>
+        </BrowserRouter>
     )
 }
 
