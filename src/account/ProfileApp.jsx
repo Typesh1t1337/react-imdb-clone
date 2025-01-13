@@ -9,9 +9,11 @@ import styles from "../App.module.scss"
 export function ProfileApp() {
     const [user,setUser] = useState({});
     const {name} = useParams();
+    let errors = "";
 
 
     useEffect(() => {
+        console.log(errors);
         const fetchData = async () => {
             const token = localStorage.getItem("accessToken");
             if(token){
