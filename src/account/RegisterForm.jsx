@@ -25,7 +25,14 @@ export function RegisterForm() {
                     email,
                     password,
                 });
-            localStorage.setItem("token", response.data.token);
+            const tokens = response.data;
+
+            const accessToken = tokens.access;
+            const refreshToken = tokens.refresh;
+
+            localStorage.setItem("accessToken", accessToken);
+            localStorage.setItem("refreshToken", refreshToken);
+            localStorage.setItem("username", username);
 
             window.location.href = "/";
         }catch(e){
