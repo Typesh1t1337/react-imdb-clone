@@ -1,6 +1,7 @@
 import {FetchMovies} from "../tmdb.js";
 import {useEffect, useState} from "react";
 import styles from '../App.module.scss';
+import { AddToFavorites } from "./addToFavorites.jsx";
 
 export function Content() {
     const [movies, setMovies] = useState([]);
@@ -28,9 +29,7 @@ export function Content() {
                         <div className={styles.desc_con2}>
                             <p className={styles.desc_date}> {movie.key_words}</p>
                         </div>
-                        <div className={styles.desc_con3}>
-                            <a className={styles.add_btn}>+ watch list</a>
-                        </div>
+                        <AddToFavorites movieId = {movie.id} />
                     </div>
                 </div>
             ))}

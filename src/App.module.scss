@@ -125,6 +125,7 @@ $success:#2A9D8F;
       border-radius: 5px;
       background-color: $primary;
       color: white;
+      cursor: pointer;
     }
   }
 }
@@ -332,5 +333,39 @@ $success:#2A9D8F;
     h2{
       color: $text;
     }
+  }
+}
+
+.message_con {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 9;
+  opacity: 1;
+  pointer-events: none;
+  .messageBox{
+    position: absolute;
+    right:0;
+    top: 0;
+    width: 350px;
+    height:30px;
+    padding:5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+
+    .eventresult{
+      color: white;
+    }
+  }
+  .messageBox.success{
+    background-color: $success;
+  }
+  .messageBox.error{
+    background-color: $error;
   }
 }

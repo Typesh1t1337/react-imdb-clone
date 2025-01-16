@@ -1,8 +1,7 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://127.0.0.1:8000/account/profile/'
+const BASE_URL = 'http://127.0.0.1:8001/account/profile/'
 
-const ss = ""
 
 export const setAuthToken = async (token) => {
     if(token){
