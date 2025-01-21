@@ -1,5 +1,6 @@
 import { Header } from "../Header.jsx";
-import {Navigate} from "react-router-dom";
+import {WatchlistBar} from "./WatchlistBar.jsx";
+
 
 
 
@@ -8,6 +9,7 @@ export function WatchListApp() {
     return (
         <>
             <Header />
+            <WatchlistBar />
         </>
     )
 }

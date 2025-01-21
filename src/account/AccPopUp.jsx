@@ -28,7 +28,7 @@ export function AccPopUp({isOpen,onClose}) {
                     </a>
                 </div>
                 <div className={styles.link_container}>
-                    <a className={styles.popup_links}>
+                    <a className={styles.popup_links} href={`/account/reviews/${username}`}>
                         My reviews
                     </a>
                 </div>

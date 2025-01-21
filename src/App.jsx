@@ -5,16 +5,19 @@ import { PopularApp } from "./popular/PopularApp.jsx";
 import {AccountApp} from "./account/AccountApp.jsx";
 import {ProtectedRoute} from "./ProtectedRoute.jsx";
 import {ProfileApp} from "./account/ProfileApp.jsx";
+import {UserReviewsApp} from "./account/UserReviewsApp.jsx";
+
 
 export function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/popular" element={<PopularApp/>} />
+                <Route path="/popular/*" element={<PopularApp/>} />
                 <Route path="/watchlist" element={<ProtectedRoute> <WatchListApp /></ProtectedRoute> } />
                 <Route path="/*" element={<IndexApp />} />
                 <Route  path="/account/*" element={<AccountApp />} />
                 <Route  path="/account/profile/:name" element={<ProtectedRoute><ProfileApp /></ProtectedRoute>} />
+                <Route path="/account/reviews/:name" element={<ProtectedRoute><UserReviewsApp /></ProtectedRoute>}></Route>
             </Routes>
         </BrowserRouter>
     )
