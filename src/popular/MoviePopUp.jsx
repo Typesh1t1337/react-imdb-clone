@@ -55,7 +55,6 @@ export function MoviePopUp({movies, closePopup}) {
                             <div className={styles.details_rating}>
                                 <p className={styles.rating}>Rating</p>
                                 <div className={styles.rating_info}>
-                                    <i className="bi bi-star-fill"></i>
                                     <p className={styles.rating_amount}>{movie.rating * 10}</p>
                                 </div>
                             </div>

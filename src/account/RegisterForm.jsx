@@ -53,7 +53,7 @@ export function RegisterForm() {
             <input className={styles.login_input} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
             <input className={styles.login_input} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
             <input className={styles.login_input} type="password" placeholder="Confirm Password" value={password2} onChange={(e) => setPassword2(e.target.value)} required />
-                <button className={styles.login_btn}>Login</button>
+                <button className={styles.login_btn}>Register</button>
             </form>
         </div>
 
