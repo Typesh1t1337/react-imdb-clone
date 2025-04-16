@@ -21,7 +21,6 @@ export function LoginForm() {
                 })
 
             const token = response.data;
-
             const accessToken = token.access;
             const refreshToken = token.refresh;
 
